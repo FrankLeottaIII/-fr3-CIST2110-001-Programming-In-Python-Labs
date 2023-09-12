@@ -9,6 +9,6 @@
 print("Hello World!")
 
 # 2. Add a print statement that prints your name. Run the program and show the output to your instructor.
-print("My name is Frank R. Leotta III"")
+print("My name is Frank R. Leotta III")
 # 3. Add a print statement that prints your favorite color. Run the program and show the output to your instructor.
 print("My favorite color is Green")
