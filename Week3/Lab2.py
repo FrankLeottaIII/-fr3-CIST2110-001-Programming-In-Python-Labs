@@ -23,7 +23,7 @@ days_in_a_year = 365
 # 8. Create a variable called "days_alive" and assign it the value of your age multiplied by the number of days in a year.
 days_alive = 34 * 365
 # 9. Create a variable called "days_alive_in_dog_years" and assign it the value of your age in dog years multiplied by the number of days in a year.
-
+days_alive_in_dog_years = 238 * 365
 # 10. Create a chart that shows the following information:
 # - Your name
 # - Your age
@@ -52,3 +52,13 @@ Hints:
 - print has an optional parameter called "end" that can be used to change the default newline character (\n) to something else or maybe even add a tab (\t) to the end of the line (or multiple tabs)
 - You will need to use conversion functions to convert your numbers to strings
 """
+print("==================================")
+print("| Name: " + name + "       |")
+print("| Age: " + age + "                         |")
+print("| Favorite Color: " + favorate_color + "           |")
+print("| Favorite Movie: " + favorate_movie + "     |")
+print("| Age in Dog Years: " + str(my_age_in_dog_years) + "          |")
+print("| Days in a Year: " + str(days_in_a_year) + "            |")
+print("| Days Alive: " + str(days_alive) + "               |")
+print("| Days Alive in Dog Years: " + str(days_alive_in_dog_years) + " |")
+print("==================================")
