@@ -7,6 +7,7 @@
 # Note2: to run the program, Select the "Play" button at the top of the screen.
 
 print("Hello World!")
+print("Hello World!")
 
 # 2. Add a print statement that prints your name. Run the program and show the output to your instructor.
 print("My name is Frank R. Leotta III")
