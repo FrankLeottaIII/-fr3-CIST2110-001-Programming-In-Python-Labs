@@ -6,11 +6,11 @@ This lab is designed to get you familiar with Python Data Types, Variables, and 
 """
     
 # 1. Create a variable called "name" and assign it the value of your name. Print the variable.
-
+name = "Frank R. Leotta III"
 # 2. Create a variable called "age" and assign it the value of your age. Print the variable.
-
+age = "34"
 # 3. Create a variable called "favorite_color" and assign it the value of your favorite color. Print the variable.
-
+favorate_color = "Green"
 # 4. Create a variable called "favorite_movie" and assign it the value of your favorite movie. Print the variable.
 
 # 5. Use string concatenation to print the following sentence: "Hello, my name is <name>. I am <age> years old. My favorite color is <favorite_color> and my favorite movie is <favorite_movie>."
