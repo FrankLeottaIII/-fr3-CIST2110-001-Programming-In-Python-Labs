@@ -24,4 +24,4 @@ future_balance = balance * (1 + interest_rate/100) ** years
 # 8. Round the future balance to 2 decimal places using the round() function.
 round(future_balance, 2)
 # 9. Print the following sentence using string concatenation: "Hello <name>, your balance after <years> years will be $<future_balance>."
-print("Hello " + name + ", your balance after " + str(years) + " years will be $" + str(future_balance) + ".")
+print("Hello " + name + ", your balance after " + str(years) + " years will be $" + float(round(future_balance)) + ".")
