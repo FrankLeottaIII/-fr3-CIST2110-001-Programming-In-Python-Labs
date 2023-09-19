@@ -17,13 +17,13 @@ favorate_movie = "Batman"
 # Note: punctuation and capitalization matters. Make sure your sentence matches the one above exactly.
 print("Hello, my name is " + name + ". I am " + age + " years old. My favorite color is " + favorate_color + " and my favorite movie is " + favorate_movie + ".")
 # 6. Create a variable called "my_age_in_dog_years" and assign it the value of your age multiplied by 7. 
-my_age_in_dog_years = 34 * 7
+my_age_in_dog_years = int(age) * 7
 # 7. Create a variable called "days_in_a_year" and assign it the value of 365.
 days_in_a_year = 365
 # 8. Create a variable called "days_alive" and assign it the value of your age multiplied by the number of days in a year.
-days_alive = 34 * 365
+days_alive = int(age) * 365
 # 9. Create a variable called "days_alive_in_dog_years" and assign it the value of your age in dog years multiplied by the number of days in a year.
-days_alive_in_dog_years = 238 * 365
+days_alive_in_dog_years = int(days_alive) * 365
 # 10. Create a chart that shows the following information:
 # - Your name
 # - Your age
@@ -34,6 +34,15 @@ days_alive_in_dog_years = 238 * 365
 # - Number of days you have been alive
 # - Number of days you have been alive in dog years
 
+##converting things to strings to print them correctly
+str(name) 
+str(age)
+str(favorate_color)
+str(favorate_movie)
+str(my_age_in_dog_years)
+str(days_in_a_year)
+str(days_alive)
+str(days_alive_in_dog_years)
 
 """
 Make it look pretty as well as informative. Use the following format:
