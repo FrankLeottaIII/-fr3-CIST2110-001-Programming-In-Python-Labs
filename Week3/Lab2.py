@@ -12,16 +12,16 @@ age = "34"
 # 3. Create a variable called "favorite_color" and assign it the value of your favorite color. Print the variable.
 favorate_color = "Green"
 # 4. Create a variable called "favorite_movie" and assign it the value of your favorite movie. Print the variable.
-
+favorate_movie = "Batman"
 # 5. Use string concatenation to print the following sentence: "Hello, my name is <name>. I am <age> years old. My favorite color is <favorite_color> and my favorite movie is <favorite_movie>."
 # Note: punctuation and capitalization matters. Make sure your sentence matches the one above exactly.
-
+print("Hello, my name is " + name + ". I am " + age + " years old. My favorite color is " + favorate_color + " and my favorite movie is " + favorate_movie + ".")
 # 6. Create a variable called "my_age_in_dog_years" and assign it the value of your age multiplied by 7. 
-
+my_age_in_dog_years = 34 * 7
 # 7. Create a variable called "days_in_a_year" and assign it the value of 365.
-
+days_in_a_year = 365
 # 8. Create a variable called "days_alive" and assign it the value of your age multiplied by the number of days in a year.
-
+days_alive = 34 * 365
 # 9. Create a variable called "days_alive_in_dog_years" and assign it the value of your age in dog years multiplied by the number of days in a year.
 
 # 10. Create a chart that shows the following information:
