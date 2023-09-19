@@ -12,9 +12,9 @@ age = int(input("What is your age? "))
 # 3. Ask the user for a balance and assign it to a variable called "balance".
 balance = float(input("What is your balance? "))
 # 4. Ask the user for a number of years to calculate interest and assign it to a variable called "years".
-years = int(input("How many years do you plan on having this debt? "))
+years = float(input("How many years do you plan on keeping this balance? "))
 # 5. Ask the user for an interest rate and assign it to a variable called "interest_rate".
-interest_rate = float(input("What is the interest rate? "))
+interest_rate = float(input("What is the interest rate for this account? "))
 # 6. Convert the balance, years, and interest_rate to float data types.
 # Note: This is only necessary if you did not specify the data type in the input() function...
 ## doing it anyway because why not
@@ -22,6 +22,6 @@ years = float(years)
 # 7. Calculate the future balance using the formula: balance * (1 + interest_rate/100) ** years
 future_balance = balance * (1 + interest_rate/100) ** years
 # 8. Round the future balance to 2 decimal places using the round() function.
-round(future_balance, 2)
+future_balance = round(future_balance, 2)
 # 9. Print the following sentence using string concatenation: "Hello <name>, your balance after <years> years will be $<future_balance>."
-print("Hello " + name + ", your balance after " + str(years) + " years will be $" + float(round(future_balance)) + ".")
+print("Hello " + name + ", your balance after " + str(years) + " years will be $" + str(future_balance) + ".")
