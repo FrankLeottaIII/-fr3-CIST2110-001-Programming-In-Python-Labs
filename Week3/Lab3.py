@@ -1,5 +1,5 @@
-print("Lab3")
-print("Author: Frank R. Leotta III") 
+#Lab3
+#Author: Frank R. Leotta III
 
 """_summary_
 This lab is designed to get you familiar with Python input(), converting data types, and using the round() function.
@@ -10,7 +10,7 @@ name = input("What is your name? ")
 # 2. Ask the user for their age and assign it to a variable called "age".
 age = int(input("What is your age? "))
 # 3. Ask the user for a balance and assign it to a variable called "balance".
-balance = float(input("What is your balance? "))
+balance = float(input("What is your balance for this account? "))
 # 4. Ask the user for a number of years to calculate interest and assign it to a variable called "years".
 years = float(input("How many years do you plan on keeping this balance? "))
 # 5. Ask the user for an interest rate and assign it to a variable called "interest_rate".
@@ -25,3 +25,5 @@ future_balance = balance * (1 + interest_rate/100) ** years
 future_balance = round(future_balance, 2)
 # 9. Print the following sentence using string concatenation: "Hello <name>, your balance after <years> years will be $<future_balance>."
 print("Hello " + name + ", your balance after " + str(years) + " years will be $" + str(future_balance) + ".")
+
+## this is basic interest calculator typically not used for monthly payments or savings accounts... still good for APY
