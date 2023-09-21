@@ -1,5 +1,5 @@
 # Lab2
-# Author: 
+# Author: Frank R. Leotta III
 
 """_summary_
 This lab is designed to get you familiar with Python Data Types, Variables, and Arithmetic Operators.
@@ -61,13 +61,13 @@ Hints:
 - print has an optional parameter called "end" that can be used to change the default newline character (\n) to something else or maybe even add a tab (\t) to the end of the line (or multiple tabs)
 - You will need to use conversion functions to convert your numbers to strings
 """
-print("==================================")
+print("===================================")
 print("| Name: " + name + "       |")
 print("| Age: " + age + "                         |")
 print("| Favorite Color: " + favorate_color + "           |")
-print("| Favorite Movie: " + favorate_movie + "     |")
-print("| Age in Dog Years: " + str(my_age_in_dog_years) + "          |")
-print("| Days in a Year: " + str(days_in_a_year) + "            |")
+print("| Favorite Movie: " + favorate_movie + "          |")
+print("| Age in Dog Years: " + str(my_age_in_dog_years) + "           |")
+print("| Days in a Year: " + str(days_in_a_year) + "             |")
 print("| Days Alive: " + str(days_alive) + "               |")
-print("| Days Alive in Dog Years: " + str(days_alive_in_dog_years) + " |")
-print("==================================")
+print("| Days Alive in Dog Years: " + str(days_alive_in_dog_years) + "|")
+print("===================================")
