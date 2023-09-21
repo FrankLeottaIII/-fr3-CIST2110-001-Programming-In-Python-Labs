@@ -26,6 +26,7 @@ future_balance = round(future_balance, 2)
 # 9. Print the following sentence using string concatenation: "Hello <name>, your balance after <years> years will be $<future_balance>."
 print("Hello " + name + ", your balance after " + str(years) + " years will be $" + str(future_balance) + ".")
 
+##below are basic notes for future reference, ignore for assignment
 ## this is basic interest calculator typically not used for monthly payments or savings accounts... still good for APR calculations... Not APY  
 ## APY = (1 + r/n)^n - 1
 ## r = interest rate
@@ -34,5 +35,5 @@ print("Hello " + name + ", your balance after " + str(years) + " years will be $
 ## APR = Annual Percentage Rate
 # APR is the simple interest rate you pay over one year.
 ## APY is the actual interest earned or paid in one year, taking into account the effect of compounding.
-#
+
 
