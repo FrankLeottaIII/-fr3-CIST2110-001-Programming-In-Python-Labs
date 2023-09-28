@@ -14,17 +14,17 @@ elif number < 0:
 else:   
         print("That number is zero")
 # 2. Write some code that asks the user for a number and prints out whether it is even or odd.
-number_two = float(input("Hello, please enter another whole number \n        NOTE: number will be rounded to the nearest integer regardless so enter a positive number: "))
+number_two = float(input("Hello, please enter another number to be determined if it is even or odd.  It will be rounded to the nearest whole number:"))
 number_two_rounded = round(number_two, 0)
 if number_two_rounded %  2 == 0:
-        print("That number is even when rounded to the nearest number")   
+        print("That number is even when rounded to the nearest integer")   
 else:   
-        print("That number is odd when rounded to the nearest number")
+        print("That number is odd when rounded to the nearest integer")
 
 ## problem going forward :it regesters it as odd if its a decimal number so it needs to be rounded to
 #    a whole number.... or an absolute vaue of the decimal number
 # 3. Write some code that asks the user for a number and prints out all the numbers from 1 to that number using a while loop.
-number_three = input("Hello, please enter a positive whole number \n         (note: I recommend one between 1 and 50): ")
+number_three = input("Hello, please enter a positive whole number \n \t (note: I recommend one between 1 and 50): ")
 number_three = float(number_three)
 start_number = 1
 start_number = float(start_number)
@@ -40,7 +40,7 @@ for i in range(5):
 print(number_four/5)    
 ## For X in range(), good for average questions or summery questions that have a defined amount of varibles.
 # 5. Write some code that prints out all the numbers from 1 to 10 that are divisible by 3 or 5.
-print("fun fact: the following numbers are not divisible by 3 or 5")
+print("fun fact: the following numbers are not divisible by 3 or 5 without a remainder")
 for i in range(1, 11):
         if i % 3 == 0:  
                 continue
@@ -64,13 +64,4 @@ for number_six in range(1, number_six_int + 1):
         if number_six > 100:
                 break
         print(number_six)
-
-
-## notes for later (copy out of lab homework elsewhere)
-# Finding if something is even or odd
-#print("% is the remainder of a division problem"")
-#print("== is a comparison operator")
-#    if number_two % 2 == 0:
-#        print("That number is even")   
-#   else:   
-#       print("That number is odd")
+print("Have a nice day, and thank you for using my program!")
