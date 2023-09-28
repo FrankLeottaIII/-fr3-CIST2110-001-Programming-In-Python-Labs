@@ -23,7 +23,6 @@ else:
 
 ## problem going forward :it regesters it as odd if its a decimal number so it needs to be rounded to
 #    a whole number.... or an absolute vaue of the decimal number
-#       Fill out later,  feel like doing something else right now
 # 3. Write some code that asks the user for a number and prints out all the numbers from 1 to that number using a while loop.
 number_three = input("Hello, please enter a positive whole number \n         (note: I recommend one between 1 and 50): ")
 number_three = float(number_three)
