@@ -6,7 +6,8 @@ This lab is designed to get you familiar with Python Boolean Expressions, Condit
 """
 
 # 1. Write some code that asks the user for a number and prints out whether it is positive, negative, or zero.
-number = int(input("Hello, please enter a whole number: "))
+number = float(input("Hello, please enter a whole number: "))
+number = int(number)
 if number > 0:
         print("That number is positive")   
 elif number < 0:
@@ -24,7 +25,7 @@ else:
         print("That number is odd when rounded to the nearest integer")
 # alternate way of doing it from class
 #remainder = number_two_rounded % 2
-i#f remainder == 0:
+#if remainder == 0:
   #      print("That number is even when rounded to the nearest integer")
 
 ## problem going forward :it regesters it as odd if its a decimal number so it needs to be rounded to
@@ -46,7 +47,7 @@ number_four = 0
 for i in range(5):
         number_four += float(input("ok then, please enter a number, I will average it for you after I obtain 5 numbers: "))
 average = number_four/5
-print(str(average) + " is the average of the 5 numbers you entered"
+print(str(average) + " is the average of the 5 numbers you entered")
 
 #floats are not good for arrays and touple, they are not exact, so they are not good for this type of problem
 ## For X in range(), good for average questions or summery questions that have a defined amount of varibles.
@@ -65,13 +66,17 @@ for i in range(1, 11):
 # the % is pretty convienent for division problems..... I need to memorize this lesson more.
 # 6. Write some code that asks the user for a number and then prints out a countdown from that number to 1 using a while loop. After the countdown, print "Blast off!".
 number_five = (float(input("Hello, please enter a positive whole number for a countdown to 0:  ")))
+import time
 while number_five > 0:
+        time.sleep(1)
         print(number_five)
         number_five -= 1
 print("Blast off!")
 # 7. Write some code that asks the user for a number and then uses a for loop to iterate from 1 to that number. If the current number is divisible by 7, print "Lucky" and continue to the next iteration. If the current number is greater than 100, break the loop.
 number_six = (float(input("Hello, please enter a positive whole number, I will count how many numbers \n there are from 0 to your number and lucky numbers divisable by 7... but i will not count past 100: ")))
 number_six_int = int(number_six)
+#imoorting time to make it more dramatic
+
 for number_six in range(1, number_six_int + 1):
         if number_six % 7 == 0:
                 print("Lucky")
