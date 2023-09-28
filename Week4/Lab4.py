@@ -26,11 +26,11 @@ else:
 #       Fill out later,  feel like doing something else right now
 # 3. Write some code that asks the user for a number and prints out all the numbers from 1 to that number using a while loop.
 number_three = (float(input("Hello, please enter a positive whole number \n (note: I recommend one between 1 and 50): ")))
-while number_three > 0:
+start_number = 1
+while start_number == number_three:
         print(number_three)
-        number_three = number_three =+ 1
-         if number_three == 0:
-                print("done")
+        number_three += 1
+print("done")
                 
 
 
