@@ -6,7 +6,7 @@ This lab is designed to get you familiar with Python Boolean Expressions, Condit
 """
 
 # 1. Write some code that asks the user for a number and prints out whether it is positive, negative, or zero.
-number = float(input("Hello, please enter a whole number: "))
+number = float(input("Hello, please enter a whole number:"))
 number = int(number)
 if number > 0:
         print("That number is positive")   
@@ -41,18 +41,19 @@ while start_number <= number_three:
         start_number += 1
 print("done")
 ## kept on getting a error message ValueError: could not convert string to float... so i made it a float in another command. how odd
-
+#
 # 4. Use a for loop to ask a user for 5 numbers and print out the average of those 5 numbers.
 number_four = 0 
 for i in range(5):
-        number_four += float(input("ok then, please enter a number, I will average it for you after I obtain 5 numbers: "))
+        number_four += float(input("ok then, please enter a number to be averaged together after I obtain 5 numbers total:"))
 average = number_four/5
 print(str(average) + " is the average of the 5 numbers you entered")
 
 #floats are not good for arrays and touple, they are not exact, so they are not good for this type of problem
 ## For X in range(), good for average questions or summery questions that have a defined amount of varibles.
+#
 # 5. Write some code that prints out all the numbers from 1 to 10 that are divisible by 3 or 5.
-print("fun fact: the following numbers are not divisible by 3 or 5 without a remainder")
+print("fun fact: the following numbers are divisible by 3 or 5 without any remainder")
 for i in range(1, 11):
         if i % 3 == 0 or i % 5 == 0:
                 print(i)
@@ -64,6 +65,7 @@ for i in range(1, 11):
 
 #need to watch the wording of the question, it says divisible by 3 or 5, I got it reversed by accident, fixed it before I turned it in.
 # the % is pretty convienent for division problems..... I need to memorize this lesson more.
+
 # 6. Write some code that asks the user for a number and then prints out a countdown from that number to 1 using a while loop. After the countdown, print "Blast off!".
 number_five = (float(input("Hello, please enter a positive whole number for a countdown to 0:  ")))
 import time
@@ -85,3 +87,5 @@ for number_six in range(1, number_six_int + 1):
                 break
         print(number_six)
 print("Have a nice day, and thank you for using my program!")
+# Reminder need a break statement to stop the loop, otherwise it will keep going forever
+#NOTE: keep getting errors on and off after . and , for some reason, even though the code makes sense and works most of the time...
