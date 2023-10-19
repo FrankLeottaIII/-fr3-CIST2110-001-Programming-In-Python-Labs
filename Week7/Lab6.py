@@ -15,11 +15,18 @@ def calculate_rectangle_area(length: float, width:float) -> float:
     Returns:
     float: The area of the rectangle.
     """
-    return length * width
+    return float(length) * float(width)
 
     
 #function 2    
-def calculate_hypotenuse():
+def calculate_hypotenuse(A: float, B: float C:) -> float:
+    """
+    Calculates the hypotenuse of a right triangle given the lengths of the other two sides.
+"""
+    A^2 + B^2 = C^2
+    
+
+
 
 #function 3
 def is_even():
