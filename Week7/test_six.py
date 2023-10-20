@@ -1,8 +1,8 @@
-# test.py
+## test.py
 
 
 
-
+import pytest
 
 """ TO DO PYTEST, 3 steps *** Type into terminal
 1.)Save virtual environment to folder if you havent already
@@ -25,24 +25,37 @@
 # pytest <whatever the python file name is> - k  rectangle -v
 # that will run all the tests that have "rectangle" in the name
 
- #pytest <whatever the python file name is> -v -x -k "test_rectangle_area" test.py
-#-v is verbose
-#-x stops at the first failed test
-# this will run the test_rectangle_area test
 
 
-## add in functions from test.py's test statements here to make the pytest work
-###Funtion 1
+
+
+
+"""
+ERROR: file or directory not found: test_six.py
+
+Found online
+https://stackoverflow.com/questions/61490861/pytest-cannot-find-file-or-directory-when-running-test
+For anyone stopping by and facing the same issues when using markers (e.g. pytest -m "not your-mark")
+
+collects the items, deselects the items, and does nothing with it. So you have to explicitly tell it to run the tests with the markers you want.
+I can do that by adding the -m flag to the pytest command:
+pytest -m "not your-mark"
+
+"""
 
 
 
 ###ok now for the actual work####
 
+## add in functions from test.py's test statements here to make the pytest work
+
 # Import the pytest library
 #import pytest
 
+
+
 # As you add functions to Lab6.py, import them here (uncomment the lines)
-from Lab6 import calculate_rectangle_area#, calculate_hypotenuse, is_even, find_maximum, grade_calculator
+from Lab6 import calculate_rectangle_area, calculate_hypotenuse, is_even, find_maximum, grade_calculator
 
 #or you do it individually next to it, but this is easier and cleaner
 # from Lab6 import calculate_rectangle_area
@@ -59,6 +72,8 @@ def test_rectangle_area():
     assert calculate_rectangle_area(5, 5) == 25
     assert calculate_rectangle_area(0, 0) == 0
     assert calculate_rectangle_area(10, 20) == 200
+
+
 
 # Test cases for the Pythagorean theorem
 def test_pythagorean_theorem():
