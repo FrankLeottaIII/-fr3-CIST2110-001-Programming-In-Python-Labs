@@ -1,9 +1,50 @@
 # test.py
 
+
+
+
+
+""" TO DO PYTEST, 3 steps *** Type into terminal
+1.)Save virtual environment to folder if you havent already
+#python3 -m venv venv
+"""
+#2.)
+# ACTIVATE VIRTUAL ENVIRONMENT
+#venv\Scripts\activate
+
+
+"""3.) In terminal enter this:
+#pip install pytest
+
+
+"""
+###OK YORU DONE WITH PYTEST, follow tips below to use it
+
+#-K DOES A FUZZY SEARCH FOR THE WORLD
+
+# pytest <whatever the python file name is> - k  rectangle -v
+# that will run all the tests that have "rectangle" in the name
+
+ #pytest <whatever the python file name is> -v -x -k "test_rectangle_area" test.py
+#-v is verbose
+#-x stops at the first failed test
+# this will run the test_rectangle_area test
+
+
+## add in functions from test.py's test statements here to make the pytest work
+###Funtion 1
+
+
+
+###ok now for the actual work####
+
 # Import the pytest library
 #import pytest
-from Lab6 import calculate_rectangle_area, calculate_hypotenuse, is_even, find_maximum, grade_calculator
+
 # As you add functions to Lab6.py, import them here (uncomment the lines)
+from Lab6 import calculate_rectangle_area#, calculate_hypotenuse, is_even, find_maximum, grade_calculator
+
+#or you do it individually next to it, but this is easier and cleaner
 # from Lab6 import calculate_rectangle_area
 # from Lab6 import calculate_hypotenuse
 # from Lab6 import is_even

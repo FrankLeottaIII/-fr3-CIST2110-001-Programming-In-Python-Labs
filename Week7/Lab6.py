@@ -1,9 +1,42 @@
 # Lab6
 # Author: Frank R. Leotta
 
+import pytest
+
+""" TO DO PYTEST, 4 steps *** Type into terminal
+1.)Save virtual environment to folder if you havent already
+#python3 -m venv venv
+"""
+#2.)
+# ACTIVATE VIRTUAL ENVIRONMENT
+#venv\Scripts\activate
+
+
+"""3.) In terminal enter this:
+
+#pip install pytest
+
+
+"""
+#  step 4
+# in vs coder, import pytest
+
+
+
+###OK YORU DONE WITH PYTEST, follow tips below to use it
+
+#-K DOES A FUZZY SEARCH FOR THE WORLD
+
+# pytest <whatever the python file name is> - k  rectangle -v
+# that will run all the tests that have "rectangle" in the name
+
+# if ERROR: file or directory not found: test.py
+# then you need to run the test.py file first
+
 
 ## add in functions from test.py's test statements here to make the pytest work
 ###Funtion 1
+
 def calculate_rectangle_area(length: float, width:float) -> float:
     """
     Calculates the area of a rectangle given its length and width.
@@ -113,3 +146,31 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# NOTES FROM COPILOT
+#-Q IS QUIET
+#-R IS REPORTING
+#-S IS CAPTURES THE STANDARD OUT
+#-W IS WARNING
+#-H IS HELP
+#-M IS MARKING
+#-N IS DRY RUN
+#-P IS PROFILE
+#-T IS TIME OUT
+#-A IS ADDOPTS
+#-B IS PYTHONPATH
+#-C IS CHDIR
+#-D IS DOCTEST
+#-E IS ENVIRONMENT
+#-F IS FAILED FIRST
+#-G IS GENERATE REPORT
+#-I IS INSTANT QUALITY
+#-J IS JUNIT XML
+#-L IS LAST FAILED
+#-O IS DOCTEST REPORT
+#-U IS UNORDERED
+#-Y IS ASSERTION
+#-Z IS EXIT FIRST
+#-1 IS EXIT FIRST
+#-2 IS EXIT FIRST
+#ECT
