@@ -104,7 +104,15 @@ def is_even(x: int) -> bool:
 
 
 #function 4
-def find_maximum():
+def find_maximum(x: float, y:float) -> float:
+    """ summery
+    finding the maximum of two numbers.  The bigger number is returned.
+
+    arguments:
+    x (float): first number
+    y (float): second number
+
+"""
     x = float(x)
     y = float(y)
     if x > y:
@@ -115,30 +123,23 @@ def find_maximum():
 
 #function 5
 def grade_calculator(x: int)-> str:
-    if x >= 90:
+    """"Summery
+    calculats a letter grade
+    
+        
+    """
+    if x >= 90 and x <= 100:
         return "A"
-    elif x >= 80:
+    elif x >= 80 and x < 90:
         return "B"
-    elif x >= 70:
+    elif x >= 70 and x < 80:
         return "C"
-    elif x >= 60:
+    elif x >= 60 and x < 70:
         return "D"
-    elif x >= 50:
+    elif x <= 59 and x >= 0:
         return "F"
     else:
         return "Invalid Score"
-
-
-
-
-
-
-
-
-
-
-
-
 
 def main():
     pass
