@@ -1,0 +1,25 @@
+
+in
+words_cleaned_list = list(words_cleaned)
+
+from collections import Counter
+a_counts = Counter(words_cleaned_list, 'a')
+a_counts = words_cleaned_list.counter('a')
+e_counts = words_cleaned_list.counter('e')
+i_counts = words_cleaned_list.counter('i')
+o_counts = words_cleaned_list.counter('o')
+u_counts = words_cleaned_list.counter('u')
+y_counts = words_cleaned_list.counter('y')
+
+if a_counts > e_counts and a_counts > i_counts and a_counts > o_counts and a_counts > u_counts:
+        print("a is the most common vowel")
+elif e_counts > a_counts and e_counts > i_counts and e_counts > o_counts and e_counts > u_counts:
+    print("e is the most common vowel")
+elif i_counts > a_counts and i_counts > e_counts and i_counts > o_counts and i_counts > u_counts:
+    print("i is the most common vowel")
+elif o_counts > a_counts and o_counts > e_counts and o_counts > i_counts and o_counts > u_counts:
+    print("o is the most common vowel")
+elif u_counts > a_counts and u_counts > e_counts and u_counts > i_counts and u_counts > o_counts:
+    print("u is the most common vowel")
+elif y_counts > a_counts and y_counts > e_counts and y_counts > i_counts and y_counts > o_counts and y_counts > u_counts:
+    print("y is the most common vowel")
