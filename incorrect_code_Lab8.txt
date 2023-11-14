@@ -23,3 +23,7 @@ elif u_counts > a_counts and u_counts > e_counts and u_counts > i_counts and u_c
     print("u is the most common vowel")
 elif y_counts > a_counts and y_counts > e_counts and y_counts > i_counts and y_counts > o_counts and y_counts > u_counts:
     print("y is the most common vowel")
+
+it does not work
+AttributeError: 'list' object has no attribute 'counter'
+cant be in a list
