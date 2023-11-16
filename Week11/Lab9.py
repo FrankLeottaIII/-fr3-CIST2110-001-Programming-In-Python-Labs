@@ -1,16 +1,18 @@
 #Lab 9
-# Author:
+# Author: Frank R. Leotta III
 
 """_summary_
 
-This lab is designed to create a simple web application using streamlit and create a simple Date counter using datetime.
+This lab is designed to create a simple web 
+application using streamlit and create a simple Date counter using datetime.
 """
 
 # 1. We will first need to activate and install streamlit.
-# pip install streamlit
+# pip install streamlit (in terminal)
 
 # 2. Import streamlit here as st and datetime as dt
-
+import datetime as dt
+import streamlit as st
 
 # 3. Create a title for your web application. Streamlit has a function for this called title
 
