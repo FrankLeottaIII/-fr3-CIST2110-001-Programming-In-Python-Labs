@@ -15,15 +15,21 @@ import datetime as dt
 import streamlit as st
 
 # 3. Create a title for your web application. Streamlit has a function for this called title
-
+st.title("Date Counter  Web Application")
 
 # 4. Create a subheader for your web application. Streamlit has a function for this called subheader
-
+st.subheader("This Web Application will calculate the number of days until a certain date")
 # 5. Create a date input for the user to enter a date. Streamlit has a function for this called date_input
 # Make sure to save the input into a variable
+date = st.date_input("Enter a date: ", value='today') #(additional ideas), value=dt.datetime.now())  min_value=dt.date(1900, 1, 1), max_value=dt.date(2100, 12, 31))
 
 # 6. Create a button for the user to click. Streamlit has a function for this called button
 # Make sure to save the button click into a variable
+button = st.button("Calculate")
+#at this point, need to go to question 8 and create the app function to view
+# if true it triggures something
+
+
 
 # 7. Create a function that will calculate the number of days until the date entered by the user.
 # You will need to use the datetime library for this.
@@ -41,7 +47,19 @@ import streamlit as st
 # Check if the button has been clicked, then call the calculate_days function and pass in the date entered by the user. Use a try except block to catch any errors.
 # Save the result into a variable.
 # Print out the result.
-
+def app():
+    if button:
+        # st.write("you clicked me")  #this is just to test if the button works
+        try:
+            result = calculate_days(date)
+            st.write(result)
+        except:
+            st.write("Error")
+        # try:    # this is to test if the date is being entered correctly
+        #     result = calculate_days(date)
+        #     st.write(result)
+        # except:
+        #     st.write("Error")
 
 # 9. Run the web application by typing streamlit run Lab9.py in the terminal.
 # 10. Enter a date in the format of YYYY-MM-DD and click the button.
@@ -50,4 +68,4 @@ import streamlit as st
 # 13. If the number of days is incorrect, then you will need to debug your code.
 
 if __name__ == '__main__':
-    app()
+        app()
