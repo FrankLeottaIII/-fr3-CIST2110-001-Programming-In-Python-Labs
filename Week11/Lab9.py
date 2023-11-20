@@ -40,7 +40,31 @@ button = st.button("Calculate")
 # The function should take in a datetime.date as a parameter.
 # The function should return an integer.
 # The function should be called calculate_days
+def calculate_days(date)->int:
+    """_summary_
+        Returns the number of days until the date entered by the user.
 
+    Args:
+        date (date): The date entered by the user. Format: YYYY-MM-DD
+
+    Returns:
+        int: The number of days until the date entered by the user.
+    """
+    #get the current date
+    current_date = dt.date.now().date()
+    #calculate the number of days until the date entered by the user
+
+
+#(55:37 left ooff)
+
+ #additonal way of doing it:
+# try:
+#     date = dt.datetime.strptime(date, '%Y-%m-%d')
+#     today = dt.datetime.now()
+#     days = date - today
+#     return days.days
+# except:
+#     return "Error"
 
 
 # 8. Create an app function that will run the web application.
@@ -51,10 +75,10 @@ def app():
     if button:
         # st.write("you clicked me")  #this is just to test if the button works
         try:
-            result = calculate_days(date)
-            st.write(result)
+            st.write(" Hello, you pressed me")
         except:
             st.write("Error")
+
         # try:    # this is to test if the date is being entered correctly
         #     result = calculate_days(date)
         #     st.write(result)
