@@ -51,11 +51,14 @@ def calculate_days(date)->int:
         int: The number of days until the date entered by the user.
     """
     #get the current date
-    current_date = dt.date.now().date()
+    current_date = dt.datetime.now().date()
     #calculate the number of days until the date entered by the user
-
-
-#(55:37 left ooff)
+    days_difference = date - current_date
+    st.write(days_difference.days)
+    #  LEF TOFF HEREEE____________________________1:10
+    if days_difference.days < 0:
+        raise ValueError("The date entered is in the past.")
+    return days_difference.days
 
  #additonal way of doing it:
 # try:
@@ -75,9 +78,14 @@ def app():
     if button:
         # st.write("you clicked me")  #this is just to test if the button works
         try:
-            st.write(" Hello, you pressed me")
-        except:
-            st.write("Error")
+            result = calculate_days(date)
+        #    st.write(" Hello, you pressed me") returns a press me statment
+        except ValueError:
+            st.write("Please enter a valid date.")
+            return
+    st.write(f"Current Date: {dt.datetime.now().date()}")
+    st.write(f"Selected Date: {date}")
+    st.write(f"Days until selected date: {result}")
 
         # try:    # this is to test if the date is being entered correctly
         #     result = calculate_days(date)
