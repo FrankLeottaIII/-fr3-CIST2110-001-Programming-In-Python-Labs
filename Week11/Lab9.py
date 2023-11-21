@@ -21,7 +21,8 @@ st.title("Date Counter  Web Application")
 st.subheader("This Web Application will calculate the number of days until a certain date")
 # 5. Create a date input for the user to enter a date. Streamlit has a function for this called date_input
 # Make sure to save the input into a variable
-date = st.date_input("Enter a date: ", value='today') #(additional ideas), value=dt.datetime.now())  min_value=dt.date(1900, 1, 1), max_value=dt.date(2100, 12, 31))
+date = st.date_input("Enter a date: ", format="MM/DD/YYYY") 
+#(additional ideas), value=dt.datetime.now())  min_value=dt.date(1900, 1, 1), max_value=dt.date(2100, 12, 31))
 
 # 6. Create a button for the user to click. Streamlit has a function for this called button
 # Make sure to save the button click into a variable
@@ -54,8 +55,8 @@ def calculate_days(date)->int:
     current_date = dt.datetime.now().date()
     #calculate the number of days until the date entered by the user
     days_difference = date - current_date
+    #Debugging to see if what the days_difference is
     st.write(days_difference.days)
-    #  LEF TOFF HEREEE____________________________1:10
     if days_difference.days < 0:
         raise ValueError("The date entered is in the past.")
     return days_difference.days
@@ -78,6 +79,7 @@ def app():
     if button:
         # st.write("you clicked me")  #this is just to test if the button works
         try:
+
             result = calculate_days(date)
         #    st.write(" Hello, you pressed me") returns a press me statment
         except ValueError:
@@ -85,7 +87,7 @@ def app():
             return
     st.write(f"Current Date: {dt.datetime.now().date()}")
     st.write(f"Selected Date: {date}")
-    st.write(f"Days until selected date: {result}")
+    st.write(f'Days until selected date: {result}')
 
         # try:    # this is to test if the date is being entered correctly
         #     result = calculate_days(date)
@@ -94,10 +96,11 @@ def app():
         #     st.write("Error")
 
 # 9. Run the web application by typing streamlit run Lab9.py in the terminal.
+
 # 10. Enter a date in the format of YYYY-MM-DD and click the button.
 # 11. Check to see if the number of days until the date entered is correct.
 # 12. If the number of days is correct, then you have completed the lab.
 # 13. If the number of days is incorrect, then you will need to debug your code.
 
 if __name__ == '__main__':
-        app()
+    app()
