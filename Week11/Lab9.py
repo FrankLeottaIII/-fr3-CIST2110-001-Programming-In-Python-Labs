@@ -76,10 +76,13 @@ def calculate_days(date)->int:
 # Check if the button has been clicked, then call the calculate_days function and pass in the date entered by the user. Use a try except block to catch any errors.
 # Save the result into a variable.
 # Print out the result.
+result = ""
+
 def app():
     if button:
         # st.write("you clicked me")  #this is just to test if the button works
         try:
+            global result
             result = calculate_days(date)
         #    st.write(" Hello, you pressed me") returns a press me statment
         except ValueError:
@@ -104,3 +107,6 @@ def app():
 
 if __name__ == '__main__':
     app()
+
+#updated it because it was not working, needed global variable.
+#streamlit run Lab9.py    to run it in the terminal
