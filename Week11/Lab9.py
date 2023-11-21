@@ -79,7 +79,6 @@ def app():
     if button:
         # st.write("you clicked me")  #this is just to test if the button works
         try:
-
             result = calculate_days(date)
         #    st.write(" Hello, you pressed me") returns a press me statment
         except ValueError:
