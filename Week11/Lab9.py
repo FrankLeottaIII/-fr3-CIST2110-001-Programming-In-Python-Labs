@@ -91,7 +91,8 @@ def app():
     st.write(f"Current Date: {dt.datetime.now().date()}")
     st.write(f"Selected Date: {date}")
     st.write(f'Days until selected date: {result}')
-
+    st.write("")
+    st.subheader("for your convience, only 1 date will be displayed at a time\n")
         # try:    # this is to test if the date is being entered correctly
         #     result = calculate_days(date)
         #     st.write(result)
