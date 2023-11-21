@@ -8,6 +8,7 @@ application using streamlit and create a simple Date counter using datetime.
 """
 
 # 1. We will first need to activate and install streamlit.
+# create virtual environment (in terminal) : python -m venv venv (venv is the name of the virtual environment)
 # pip install streamlit (in terminal)
 
 # 2. Import streamlit here as st and datetime as dt
