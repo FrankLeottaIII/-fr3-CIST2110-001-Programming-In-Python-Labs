@@ -2,13 +2,15 @@
 # Author:
 
 # Lab 10 will show demonstrate how Dictionary's work in Python.
-
+"""unpacking a dictionary"""
 # 1. Create a dictionary called my_dict with the following key value pairs:
 # Key: "name", Value: "John"
 # Key: "age", Value: 30
 # Key: "city", Value: "Trenton"
 # Key: "state", Value: "New Jersey"
 my_dict = {"name": "John", "age": 30, "city": "Trenton", "state": "New Jersey"}
+# a string and a string
+
 
 # 2. Print out the dictionary.
 print(my_dict)
