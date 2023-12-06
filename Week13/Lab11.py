@@ -119,44 +119,93 @@ def checkout(self): # self is the customer
     print(f"{self.name}'s total is {total}") # print out the customer's name and the total price of all the products in the cart. #api in website, take the total charge and add taxes to it. 
     self.cart = [] # empty the cart list
 
-"""stripe api mentioned.  vulneriblitys.  flaw in api. very big bug story.  use this text for a marker of time in the video.
-gray hat hacker, #if colorblind is it red or green hat hacker?  I guess thats why its gray. flawless logic /s
-fedex is having issues, UPS is better.
-#what is a green hat hacker? do they have a green thumb? Is the dye from the green hat rubbing off on their fingers?
-#adedis, get request.  
-"""
+# ---stripe api mentioned.  vulneriblitys.  flaw in api. very big bug story.  use this text for a marker of time in the video.
+# gray hat hacker, #if colorblind is it red or green hat hacker?  I guess thats why its gray. flawless logic /s
+# fedex is having issues, UPS is better.
+# #what is a green hat hacker? do they have a green thumb? Is the dye from the green hat rubbing off on their fingers?
+# #adedis, get request.  
+# ---
 
 # def add_to_cart(self, product: Product): # self is the customer, product is the product
 #     self.cart.append(product) # add the product to the cart list
 #     print(f"{product.name} was added to {self.name}'s cart") # print out the product that was added and the customer's name.
 
 
-# 7. Create a method called display_products that prints out all the products in the cart list. ###old stuff included,updated to not included(use the __str__ method from the Product class)
+# 7. Create a method called display_products that prints out all the products in the cart list. (use the __str__ method from the Product class)
 
-def display_products(self): # self is the customer
+# """video notes, time stamp.
+# every year smallier increment.
+# mores law standard curve
+# cost creates the icrements and chips reqires ai computing, icrease cost of chips.... ai is creating new series.
+# interesting ethical issues, robots creating robots.
+# Graphics card info
+
+
+# """
+
+def display_products(self): # self is the customer  
+    print(f"{self.name}'s cart:") # print out the customer's name and the total price of all the products in the cart.  Self.name is whatever funtion you are currently in
+    for product in self.cart:
+        print(product)
+
+#keep string method since your using it, using the products string dunder method.  print product.   because added code rieght ehre, p_____
+
 
 
 # 8. **Extra** Create a method called display_products_pretty that prints out all the products in the cart list. (use the tabulate library)
 # Make a nice table table using the tabulate library.
+def display_products_pretty(self): # self is the customer  
+    #NEED TO INSTALL TABULATE LIBRARY via pip install tabulate
+    import tabulate # import the tabulate library
+    print(f"{self.name}'s cart:") # print out the customer's name and the total price of all the products in the cart.  Self.name is whatever funtion you are currently in
+    print(
+        tabulate.tabulate(
+            #tabulates takes in the list of dictionaries
+            self.cart, headers=["Name", "Price", "ID"])) # print out the cart list in a nice table fo  #pythonic way of looking at it
+    { 
+        "Name": product.name,
+        "Price": product.price,
+        "ID": product.product_id
+    }
+    headers ="keys"
+    tabulate = fancygrid
 
-
+"""Incomplete need to reviit, its before facehugger"""
 # 7. Create a class called Store. The class should have the following attributes in the __init__ method:
 # products -> this should be a list that contains Product objects.
 # customers -> this should be a list that contains Customer objects.
 
+class Store:      
+    def __init__(self): # self is the store
+        self.products = [] # this should be a list that contains Product objects.
+        self.customers = [] # this should be a list that contains Customer objects.
 
 # 8. Create a method called add_product that takes in a Product object and adds it to the products list.
-
+    def add_product(self, product: Product): # self is the store, product is the product
+        self.products.append(product) # add the product to the products list
+        print(f"{product.name} was added to the store") # print out the product that was added and the store name.
 
 # 9. Create a method called add_customer that takes in a Customer object and adds it to the customers list.
-
+    def add_customer(self, customer: Customer):
+        self.customers.append(customer)
+        print(f"{customer.name} was added to the store")
 
 # 10. Create a method called display_products that prints out all the products in the products list.
+    def display_products(self):
+        print("Products:")
+        for product in self.products:
+            print(product)
+#product.desplay_products() you dont know the scope of the product, so you need to pass it in as a paramiter This part of lecture seems important.
 
 # 11. Create a method called display_customers that prints out all the customers in the customers list.
-
+    def display_customers(self):
+        print("Customers:")
+        for customer in self.customers:
+            print(customer)
 
 # Typically we would create another file and import the classes we created. For this lab, we will just create the objects in this file to show how its possible.
+
+# you would link files together can call them.  
 
 # 12. Create a store object called store.
 
@@ -179,43 +228,55 @@ print(product1) # this is how you print a product object
 # name: "iPhone 12 Pro"
 # price: 999.99
 # product_id: 2
-
+product
 # 15. Create a product object called product3 with the following attributes:
 # name: "iPhone 12 Pro Max"
 # price: 1099.99
 # product_id: 3
+product3 = Product("iPhone 12 Pro Max", 1099.99, 3) # this is how you create a product object
 
 # 16. Create a customer object called customer1 with the following attributes:
 # name: "John"
 # customer_id: 1
+customer1 = Customer("John", 1) # this is how you create a customer object
 
 # 17. Create a customer object called customer2 with the following attributes:
 # name: "Jane"
 # customer_id: 2
+customer2 = Customer("Jane", 2) # this is how you create a customer object
 
+
+customer2.desplay_products() # this is how you print a customer object
 
 # 18. Add product1 to the store using the add_product method.
+
+store.add_product(product1) # this is how you add a product to the store
+#print(store) #doesnt have a dunder funtion
 
 # 19. Add product2 to the store using the add_product method.
 
 # 20. Add product3 to the store using the add_product method.
 
 # 21. Add customer1 to the store using the add_customer method.
-
+store.add_customer(customer1) # this is how you add a customer to the store
 # 22. Add customer2 to the store using the add_customer method.
-
+store.add_customer(customer2) # this is how you add a customer to the store
 # 23. Add product1 to customer1's cart using the add_to_cart method.
-
+customer1.add_to_cart(product1) # this is how you add a product to the customer's cart   What we were doing with iphones, not refernecing store
 # 24. Add product2 to customer1's cart using the add_to_cart method.
-
+customer1.add_to_cart(product2) # this is how you add a product to the customer's cart
 # 25. Add product3 to customer2's cart using the add_to_cart method.
-
+customer2.add_to_cart(product3) # this is how you add a product to the customer's cart
 # 26. Display current products in customer1's cart using the display_products method.
-
+customer1.display_products.pretty() # this is how you display the products in the customer's cart#################fix
 # 27. Display current products in customer2's cart using the display_products method.
-
+customer2.display_products() # this is how you display the products in the customer's cart
 # 28. Checkout customer1's cart using the checkout method.
 
 # 29. Checkout customer2's cart using the checkout method.
-
+customer2.checkout() # this is how you checkout the customer's cart
 # 30. Display current products in customer1's cart using the display_products method. (should be empty)
+#payed, cart should be empty
+customer1.display_products() # this is how you display the products in the customer's cart
+
+#showing homework 9
