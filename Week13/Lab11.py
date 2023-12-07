@@ -1,24 +1,17 @@
 # Lab 11
-# Author:
+# Author:Frank R. Leotta III
 
 # Lab 11 will show basic understanding of Object Oriented Programming in Python.
 
-
+import tabulate
 # 1. Create a class called Product. The class should have the following attributes in the __init__ method:
 # name -> this should be a string
 # price -> this should be a float
 # product_id (this should be a unique number)
 class Product:
     def __init__(self, name, price: float, product_id):# self is ref that varible  regular and optional varibles. assume name product price is required
-       #pass makes compirel happy so ... its a prlaceholder, just get rid of it
-       #build a link betweeen likne   _____ and associat to the object
-       #self and the argument  self.
         self.name = name # self is a ref to the object, name is a varible, self.name is a attribute
-        #if ifphone 12 is a product, then name is iphone 12
-        # setting the paramiter equal to itself
-        #tpye it foward read it backwards in sql, make more sense when creating a product # super important.  Self is important to programing, just look at what it is doing.  chatgpt can explain
-        # # it better
-        self.price = price # take arguments and assign them to self.varibles, only type it backwards when you are creating the object
+        self.price = price 
         self.product_id = product_id
 
 # 2. Create a method called __str__ that returns a string with the following format:
@@ -36,9 +29,9 @@ class Product:
 
 class Customer:
     def __init__(self, name, customer_id): #all of these are required
-    self.name = name #diff over time
-    self.customer_id = customer_id # diff over time
-    self.cart = [] # its going to be the same every time, so no need to pass it in as a paramiter
+        self.name = name #diff over time
+        self.customer_id = customer_id # diff over time
+        self.cart = [] # its going to be the same every time, so no need to pass it in as a paramiter
 
 # also create a __str__ method that returns a string with the following format:
 # Customer: <name>, ID: <customer_id>
@@ -77,26 +70,22 @@ class Customer:
         for product in self.cart:
             print(product)
 
-# 8. **Extra** Create a method called display_products_pretty that prints out all the products in the cart list. (use the tabulate library)
+# 8. **Extra** Create a method called display_products_pretty that prints out all the products in the cart list. 
+# (use the tabulate library)
 # Make a nice table table using the tabulate library.
 
-def display_products_pretty(self): # self is the customer  
+    def display_products_pretty(self): # self is the customer  
     #NEED TO INSTALL TABULATE LIBRARY via pip install tabulate
-    import tabulate # import the tabulate library
-    print(f"{self.name}'s cart:") # print out the customer's name and the total price of all the products in the cart.  Self.name is whatever funtion you are currently in
-    print(
-        tabulate.tabulate(
-            #tabulates takes in the list of dictionaries
-            self.cart, headers=["Name", "Price", "ID"])) # print out the cart list in a nice table fo  #pythonic way of looking at it
-    { 
-        "Name": product.name,
-        "Price": product.price,
-        "ID": product.product_id
-    }
-    headers ="keys"
-    tabulate = fancygrid
+        # import the tabulate library,  pip install first
+        print(f"{self.name}'s cart:") # print out the customer's name and the total price of all the products in the cart.  Self.name is whatever funtion you are currently in
+        print(tabulate.tabulate(
+            [{"Name": Product.name, "Price": Product.price, "ID": Product.product_id} for Product in self.cart],
+              headers="keys", tablefmt="fancy_grid"))
+        #as long as it works and you dont tab, you can enter to see the next line... just don"t space or tab.
 
-##INCOMPLETE, REFERENCE FACEHUGGER IN VIDEO LECTURE BEFORE.... TO FINSIH
+ # print out the cart list in a nice table fo  #pythonic way of looking at it
+
+
 
 # 7. Create a class called Store. The class should have the following attributes in the __init__ method:
 # products -> this should be a list that contains Product objects.
@@ -142,6 +131,7 @@ product1 =  Product("iPhone 12", 799.99, 1) # this is how you create a product o
 # name: "iPhone 12 Pro"
 # price: 999.99
 # product_id: 2
+product2 = Product("iPhone 12 Pro", 999.99, 2) # this is how you create a product object
 
 # 15. Create a product object called product3 with the following attributes:
 # name: "iPhone 12 Pro Max"
@@ -180,7 +170,7 @@ customer1.add_to_cart(product2)
 # 25. Add product3 to customer2's cart using the add_to_cart method.
 customer2.add_to_cart(product3)
 # 26. Display current products in customer1's cart using the display_products method.
-customer1.display_products.pretty()
+customer1.display_products_pretty()
 ####this seems wrong, need to fix
 
 # 27. Display current products in customer2's cart using the display_products method.
