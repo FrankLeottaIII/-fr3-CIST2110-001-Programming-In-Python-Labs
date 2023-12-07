@@ -183,3 +183,12 @@ customer1.checkout()
 customer2.checkout()
 # 30. Display current products in customer1's cart using the display_products method. (should be empty)
 customer1.display_products()
+
+# so basicly when creating classes, you create __init__ (with attributes),Thats your starting point,
+#after that you create methods.
+
+#the objects are just varibles with classes associated with them.  The objects are the varibles, the classes are the blueprints.
+
+#the objects are the varibles, the classes are the blueprints.
+
+#class->attributes->methods... then assighn it to a varbile and boom, you have an object.
