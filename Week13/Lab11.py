@@ -154,9 +154,9 @@ customer2 = Customer("Jane", 2)
 # 18. Add product1 to the store using the add_product method.
 store.add_product(product1)
 # 19. Add product2 to the store using the add_product method.
-
+store.add_product(product2)
 # 20. Add product3 to the store using the add_product method.
-
+store.add_product(product3)
 # 21. Add customer1 to the store using the add_customer method.
 
 store.add_customer(customer1) # this is how you add a customer to the store
@@ -170,6 +170,8 @@ customer1.add_to_cart(product2)
 # 25. Add product3 to customer2's cart using the add_to_cart method.
 customer2.add_to_cart(product3)
 # 26. Display current products in customer1's cart using the display_products method.
+
+#print("question 26")
 customer1.display_products_pretty()
 ####this seems wrong, need to fix
 
