@@ -49,8 +49,8 @@ class Product:
 # 2. Create a method called __str__ that returns a string with the following format:
 # Product: <name>, Price: <price>, ID: <product_id>
 # Hint: use f-strings to format the string.
-def __str__(self):
-    return f"Product: {self.name}, Price: {self.price}, ID: {self.product_id}" # could tpye haha  you will never get this, its always typing it up in the stirng format
+    def __str__(self):
+        return f"Product: {self.name}, Price: {self.price}, ID: {self.product_id}" # could tpye haha  you will never get this, its always typing it up in the stirng format
 # if f was nto ehre, just use "" + "" return can handle strings like that# sounds iffy dont do it
 
 
@@ -61,21 +61,21 @@ def __str__(self):
 # cart -> this should be a list that contains Product objects.  # going to be a list, interesting, adding products into the cart... could use a dictionary also  __dict__ method,  a wat ti
 class Customer:
     def __init__(self, name, customer_id): #all of these are required
-        self.name = name #diff over time
-        self.customer_id = customer_id # diff over time
-        self.cart = [] # its going to be the same every time, so no need to pass it in as a paramiter
+    self.name = name #diff over time
+    self.customer_id = customer_id # diff over time
+    self.cart = [] # its going to be the same every time, so no need to pass it in as a paramiter
 
-#add a product to any costomer....???
+##add a product to any costomer....???
 
-#name2: str = "hello"  # forces a type in newest python version.
-# self.name = str = name # is the way it is enforced in this code
+##name2: str = "hello"  # forces a type in newest python version.
+## self.name = str = name # is the way it is enforced in this code
 
 # also create a __str__ method that returns a string with the following format:
 # Customer: <name>, ID: <customer_id>
 # Hint: use f-strings to format the string.
 
-def __str__(self): #need to pass in self as paramiter
-    return f"Customer: {self.name}, ID: {self.customer_id}" # this is a string, not a list, so no brackets, just a string
+    def __str__(self): #need to pass in self as paramiter
+        return f"Customer: {self.name}, ID: {self.customer_id}" # this is a string, not a list, so no brackets, just a string
 
 # python has no type safty, rust has type safty. Python is a wild animal, rust is a domesticated animal... ok chat gpt
 #adds a decorator to something... didnt catch it.  @self.main mypy something
@@ -83,22 +83,22 @@ def __str__(self): #need to pass in self as paramiter
 
 # 4. Create a method called add_to_cart that takes in a Product object and adds it to the cart list. print out the product that was added and the customer's name.
 
-def add_to_cart(self, product: Product): # self is the customer, product is the product  #taking a product and add it to cart.  List can hold anything inside of them.  sting as an object is, lists can hold objects. cart can hold product objects inside of it.
+    def add_to_cart(self, product: Product): # self is the customer, product is the product  #taking a product and add it to cart.  List can hold anything inside of them.  sting as an object is, lists can hold objects. cart can hold product objects inside of it.
     #we can typehint the product.
-    self.cart.append(product) # add the product to the cart class 
-    print(f"{product.name} was added to {self.name}'s cart") # print out the product that was added and the customer's name.
+        self.cart.append(product) # add the product to the cart class 
+        print(f"{product.name} was added to {self.name}'s cart") # print out the product that was added and the customer's name.
 
 #namescaping and scoping, creating globilized varibles within that class.  need self. to access the varible
 #cart is the objects, just append product to the cart list
 
 # 5. Create a method called remove_from_cart that takes in a Product object and removes it from the cart list.
-def remove_from_cart(self, product: Product): # self is the customer, product is the product
+    def remove_from_cart(self, product: Product): # self is the customer, product is the product
     #.name is associated with that object.  Self.name is the associated with the customer
     # product name or product name
     #self.name
     #product.name for the product name# this is where encapsulation comes in.   getter and setter mentioned, but not covered due to time constraints
-    self.cart.remove(product) # remove the product from the cart list
-    print(f"{product.name} was removed from {self.name}'s cart") # print out the product that was removed and the customer's name.
+        self.cart.remove(product) # remove the product from the cart list
+        print(f"{product.name} was removed from {self.name}'s cart") # print out the product that was removed and the customer's name.
 #lists can remove as well
 
 #Wonce you endent here, everything is in that  self contained little ecosystem called a class.  Indation anything indented under costmer is in the cutmer class.
@@ -112,12 +112,12 @@ def remove_from_cart(self, product: Product): # self is the customer, product is
 
 #a list of all products in the cart, after done, you can checkout,,, what is the total cost 
 
-def checkout(self): # self is the customer
-    total = 0 # create a total variable and set it to 0
-    for product in self.cart:
-        total += product.price  #all way upp  here the products have price associated with them, so you can add them up... remember datetime having . associated with that headach only different
-    print(f"{self.name}'s total is {total}") # print out the customer's name and the total price of all the products in the cart. #api in website, take the total charge and add taxes to it. 
-    self.cart = [] # empty the cart list
+    def checkout(self): # self is the customer
+        total = 0 # create a total variable and set it to 0
+        for product in self.cart:
+            total += product.price  #all way upp  here the products have price associated with them, so you can add them up... remember datetime having . associated with that headach only different
+        print(f"{self.name}'s total is {total}") # print out the customer's name and the total price of all the products in the cart. #api in website, take the total charge and add taxes to it. 
+        self.cart = [] # empty the cart list
 
 # ---stripe api mentioned.  vulneriblitys.  flaw in api. very big bug story.  use this text for a marker of time in the video.
 # gray hat hacker, #if colorblind is it red or green hat hacker?  I guess thats why its gray. flawless logic /s
